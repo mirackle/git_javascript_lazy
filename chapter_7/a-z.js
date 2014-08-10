@@ -3,7 +3,7 @@ var azArr = [
     'H', 'I', 'G', 'K', 'L', 'M', 'N',
     'O', 'P', 'Q', 'R', 'S', 'T', 'U',
     'V', 'W', 'X', 'Y', 'Z'
-    ];
+    ];  
 
 function azprint(n) {
   if(n <= 26) return azArr[(n - 1) % 26] || ""; 
@@ -19,4 +19,3 @@ for(var i = 0; i < 54; i ++) {
   }
 } 
 console.log(logrel);
-
