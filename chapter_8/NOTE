@@ -1,1 +1,15 @@
 1 函数，想到了什么？对象方法、构造函数、闭包
+2 关于this的理解,this提供了函数的上下文,也就是作用域链的一个节点
+  var arrayLike = {
+    0: "I am 0",
+    1: "I am 1",
+    2: "I am 2",
+    length: 3,
+    say: function() { console.log("I'm saying."); }
+  }
+
+  console.log(Array.prototype.map.call(arrayLike, function(v) { return v += " <<< ";}));
+  arrayLike.map = Array.prototype.map;
+  console.log(arrayLike.map(function(v) { return v += " ---";}));
+
+3 arguments.callee,匿名函数的自我救赎
