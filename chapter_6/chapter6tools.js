@@ -41,7 +41,7 @@ function  union(o, p) {
 
 function intersection(o, p) {
   return restrict(extend({}, o), p);
-}
+}kd
 
 function keys(o) {
   if(typeof o !== "object") throw TypeError();
