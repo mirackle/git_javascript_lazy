@@ -44,13 +44,16 @@ function mybind(o, func) {
   if(typeof o !== "object" || typeof func !== "function")
     throw Error(">>> typeof error");
 
-  return function() { func.call(o, arguments); };
+  return function() { func.apply(o, arguments); };
 }
 
 var o = {
-  name: "this o";
+  name: "this o"
 };
 
-function say() {
+function say(arg0, arg1, arg2) {
+  console.log(">>>> say start");
   console.log("say name:", this.name);
+  console.log(arg0, arg1, arg2);
+  console.log(">>>> say end");
 }
