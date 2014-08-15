@@ -13,3 +13,4 @@
   console.log(arrayLike.map(function(v) { return v += " ---";}));
 
 3 arguments.callee,匿名函数的自我救赎
+4 obj[x] 不是判断x是否为obj的属性方法,而应该使用 x in obj.因为obj[x]会自动创建属性x,它永远是true(ES3里面是如此,ES5就不是，因为属性的可配置)
